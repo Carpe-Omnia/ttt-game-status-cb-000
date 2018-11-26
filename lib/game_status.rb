@@ -30,9 +30,9 @@ def won?(board)
   winner = []
   WIN_COMBINATIONS.each do |win_combo|
     if x_won?(win_combo) == true
-      winner << win_combo
+      winner = win_combo
     elsif o_won?(win_combo) == true
-      winner << win_combo
+      winner = win_combo
     end
   end
   if winner == []
