@@ -15,13 +15,13 @@ WIN_COMBINATIONS = [
   [2,4,6],
 ]
 def x_won?(win_combo, board)
-  win_combo.all? do |index|
+  return win_combo.all? do |index|
     board[index] == "X"
   end
 end
 
 def o_won(win_combo, board)
-  win_combo.all? do |index|
+  return win_combo.all? do |index|
     board[index] == "O"
   end
 end
