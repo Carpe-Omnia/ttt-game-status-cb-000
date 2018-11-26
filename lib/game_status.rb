@@ -35,6 +35,9 @@ def won?(board)
       winner << win_combo
     end
   end
-  return winner
+  if winner == []
+    winner = false
+  end
+  return winner   
 end
        
