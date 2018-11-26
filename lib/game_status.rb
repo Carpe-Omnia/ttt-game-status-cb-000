@@ -38,6 +38,5 @@ def won?(board)
   if winner == []
     winner = false
   end
-  return winner   
+  return winner
 end
-       
