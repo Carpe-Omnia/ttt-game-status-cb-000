@@ -14,13 +14,13 @@ WIN_COMBINATIONS = [
   [0,4,8],
   [2,4,6],
 ]
-def x_won?(win_combo)
+def x_won?(win_combo, board)
   win_combo.all? do |index|
     board[index] == "X"
   end
 end
 
-def o_won(win_combo)
+def o_won(win_combo, board)
   win_combo.all? do |index|
     board[index] == "O"
   end
@@ -29,9 +29,9 @@ end
 def won?(board)
   winner = []
   WIN_COMBINATIONS.each do |win_combo|
-    if x_won?(win_combo) == true
+    if x_won?(win_combo, board) == true
       winner = win_combo
-    elsif o_won?(win_combo) == true
+    elsif o_won?(win_combo, board) == true
       winner = win_combo
     end
   end
