@@ -69,9 +69,13 @@ def winner(board)
   value = won?(board)
   if value == false
     return nil
-  elsif value[0] == 'X'
-    return 'X'
   else
-    return 'O'
+    something = value[0]
+    spot = board[something]
+    if spot == "X"
+      return "X"
+    else
+      return "O"
+    end
   end
 end
