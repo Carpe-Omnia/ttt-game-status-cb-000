@@ -20,7 +20,7 @@ def x_won?(win_combo, board)
   end
 end
 
-def o_won(win_combo, board)
+def o_won?(win_combo, board)
   win_combo.all? do |index|
     board[index] == "O"
   end
