@@ -24,17 +24,17 @@ def o_won(win_combo)
   win_combo.all? do |index|
     board[index] == "O"
   end
-end    
-    
+end
+
 def won?(board)
   winner = []
   WIN_COMBINATIONS.each do |win_combo|
-    if x_won?(win_combo) == true 
-      winner << win_combo  
+    if x_won?(win_combo) == true
+      winner << win_combo
     elsif o_won?(win_combo) == true
       winner << win_combo
-    end      
+    end
   end
   return winner
-end    
+end
        
